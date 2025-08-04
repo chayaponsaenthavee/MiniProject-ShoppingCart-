@@ -10,7 +10,7 @@ public final class Product{
     // - price >= 0.
     //
     // Abstraction Function (AF):
-    // - AF(productId, productName, price) = A product with the gi
+    // - AF(productId, productName, price) = A product with the given productId, productName, and price.
     
 
     /**
@@ -18,13 +18,13 @@ public final class Product{
      */
     private void checkRep(){
         if (productId == null || productId.isBlank()){
-            throw new RuntimeException("RI violated: product");
+            throw new RuntimeException("RI violated: productId list cannot be null.");
         }
         if (productName == null || productName.isBlank()){
-            throw new RuntimeException("RI violated: product");
+            throw new RuntimeException("RI violated: productName list cannot be null.");
         }
         if (price < 0){
-            throw new RuntimeException("RI violated: price");
+            throw new RuntimeException("RI violated: price must be more than 0.");
         }
 
     }
@@ -52,8 +52,7 @@ public String getProductName(){return productName;}
 /**
  * @return ราคาสินค้า
  */
-public double getTotalPrice(){return price;}
-
+public double getPrice(){return price;}
 }
 
     
